@@ -1,0 +1,22 @@
+{
+  "name": "sdplatform-smartcontract",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "clear": "del-cli build",
+    "dev:coverage": "./node_modules/.bin/truffle run coverage --network development"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.4",
+    "chai": "^4.2.0",
+    "del-cli": "^3.0.0",
+    "eth-gas-reporter": "^0.2.14",
+    "solc": "0.5.6",
+    "solidity-coverage": "^0.7.1",
+    "truffle": "5.0.31"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.4.0",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
