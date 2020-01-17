@@ -6,9 +6,9 @@ import '../node_modules/@openzeppelin/contracts/access/roles/WhitelistedRole.sol
 
 import './ERC1132.sol';
 
-/// @title GIV - ERC20 token. Utility coin
+/// @title SDC - ERC20 token. Utility coin
 /// @notice Implementation for the ERC-1132 lockable token
-contract GIV is ERC1132, ERC20Detailed, ERC20Pausable, WhitelistedRole {
+contract SDC is ERC1132, ERC20Detailed, ERC20Pausable, WhitelistedRole {
 
   /**
     * @dev Error messages for require statements
@@ -20,8 +20,8 @@ contract GIV is ERC1132, ERC20Detailed, ERC20Pausable, WhitelistedRole {
   /**
     * @dev Token issue information
     */
-    string private NAME = 'SDPlatform GIV Token';
-    string private SYMBOL = 'GIV';
+    string private NAME = 'SDPlatform SDC Token';
+    string private SYMBOL = 'SDC';
     uint8 private DECIMALS = 18;
     uint256 private INITIAL_SUPPLY = 3500000000;
 
@@ -30,14 +30,14 @@ contract GIV is ERC1132, ERC20Detailed, ERC20Pausable, WhitelistedRole {
         _addWhitelisted(msg.sender);
     }
 
-    /// @notice Mints amount of GIV on account
+    /// @notice Mints amount of SDC on account
     /// Can be used only by whitelist
     function mint(address _account, uint256 _amount) external
     whenNotPaused onlyWhitelisted {
         _mint(_account, _amount);
     }
 
-    /// @notice Burns amount of GIV from account and removes
+    /// @notice Burns amount of SDC from account and removes
     /// allowance for this amount
     /// Can be used only by whitelist
     function burnFrom(address _account, uint256 _amount) external
@@ -45,14 +45,14 @@ contract GIV is ERC1132, ERC20Detailed, ERC20Pausable, WhitelistedRole {
         _burnFrom(_account, _amount);
     }
 
-    // @notice Add Whitelisted Role of GIV on account
+    // @notice Add Whitelisted Role of SDC on account
     /// Can be used only by whitelist
     function addWhitelisted(address _account) public
     whenNotPaused onlyWhitelistAdmin {
         _addWhitelisted(_account);
     }
 
-    // @notice Remove Whitelisted Role of GIV on account
+    // @notice Remove Whitelisted Role of SDC on account
     /// Can be used only by whitelist
     function removeWhitelisted(address _account) public
     whenNotPaused onlyWhitelistAdmin {

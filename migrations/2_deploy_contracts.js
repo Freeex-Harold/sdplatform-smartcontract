@@ -1,5 +1,5 @@
-const GIV = artifacts.require("GIV");
+const SDC = artifacts.require("SDC");
 
 module.exports = function(deployer) {
-  deployer.deploy(GIV);
+  deployer.deploy(SDC);
 };
